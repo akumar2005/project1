@@ -87,4 +87,4 @@ tidyData <- aggregate(subsetData[, 3:ncol(subsetData)],
                        by=list(subject = subsetData$subject,
                                activity = subsetData$activity), mean)
 tidyData<-tidyData[order(tidyData$subject,tidyData$activity),]
-write.table(tidyData, file = "./project/tidydata.txt", sep="\t")
+write.table(tidyData, file = "./project/tidydata.txt", row.name=FALSE)
